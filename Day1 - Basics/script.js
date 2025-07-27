@@ -22,3 +22,14 @@ console.log(fruits);
 //descending
 fruits.sort((a, b) => b.localeCompare(a));
 console.log(fruits);
+
+//sorting mixed arrays
+
+let mixedArray = ['Boy', 23, '#', '*', '&', 'House', 'Gun', 43];
+let sorted = [...mixedArray].sort();
+console.log('sorted', sorted)
+
+// Push a new item
+mixedArray.push('NewItem');
+console.log('After push:', mixedArray);
+
