@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration Form - Event Listeners Practice</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>User Registration</h1>
+        <p class="subtitle">Practice your event listeners with this interactive form!</p>
+        
+        <form id="registrationForm" class="registration-form">
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input 
+                    type="text" 
+                    id="fullName" 
+                    name="fullName" 
+                    placeholder="Enter your full name"
+                    required
+                >
+                <span class="error-message" id="nameError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    placeholder="Enter your email"
+                    required
+                >
+                <span class="error-message" id="emailError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <div class="password-container">
+                    <input 
+                        type="password" 
+                        id="password" 
+                        name="password" 
+                        placeholder="Create a password"
+                        required
+                    >
+                    <button type="button" id="togglePassword" class="toggle-password">👁️</button>
+                </div>
+                <div class="password-strength" id="passwordStrength">
+                    <div class="strength-bar">
+                        <div class="strength-fill" id="strengthFill"></div>
+                    </div>
+                    <span class="strength-text" id="strengthText">Password strength</span>
+                </div>
+                <div class="password-requirements" id="passwordRequirements">
+                    <p>Password must contain:</p>
+                    <ul>
+                        <li id="reqLength">At least 8 characters</li>
+                        <li id="reqUppercase">One uppercase letter</li>
+                        <li id="reqLowercase">One lowercase letter</li>
+                        <li id="reqNumber">One number</li>
+                        <li id="reqSpecial">One special character</li>
+                    </ul>
+                </div>
+                <span class="error-message" id="passwordError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <div class="password-container">
+                    <input 
+                        type="password" 
+                        id="confirmPassword" 
+                        name="confirmPassword" 
+                        placeholder="Confirm your password"
+                        required
+                    >
+                    <button type="button" id="toggleConfirmPassword" class="toggle-password">👁️</button>
+                </div>
+                <span class="error-message" id="confirmPasswordError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number (Optional)</label>
+                <input 
+                    type="tel" 
+                    id="phone" 
+                    name="phone" 
+                    placeholder="Enter your phone number"
+                >
+                <span class="error-message" id="phoneError"></span>
+            </div>
+
+            <div class="form-group">
+                <label class="checkbox-label">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <span class="checkmark"></span>
+                    I agree to the <a href="#" id="termsLink">Terms and Conditions</a>
+                </label>
+                <span class="error-message" id="termsError"></span>
+            </div>
+
+            <div class="form-group">
+                <label class="checkbox-label">
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <span class="checkmark"></span>
+                    Subscribe to our newsletter
+                </label>
+            </div>
+
+            <button type="submit" id="submitBtn" class="submit-btn" disabled>
+                Create Account
+            </button>
+        </form>
+
+        <div id="successMessage" class="success-message hidden">
+            <h2>🎉 Registration Successful!</h2>
+            <p>Welcome to our platform!</p>
+            <button id="resetForm" class="reset-btn">Create Another Account</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
